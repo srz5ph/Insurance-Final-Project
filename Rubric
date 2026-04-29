@@ -1,0 +1,76 @@
+Guidelines:
+We will use the 3-hour exam block on May 2nd, 9:00 AM -12:00 PM (block 6) to host individual 3-minute presentations on your projects.
+You must choose the dataset to use and register it with the instructor (Cristina) by April 23rd, 12 PM.
+Dataset requirements:
+Must be a physical file that you can download in your local computer. It must not be too heavy.
+At least 1000 rows (data points) and at least 2 columns (features). 
+Ideally, it must be related to your field of study or personal interest.
+You must discuss the dataset in-person or via-zoom with Cristina. We are asking you to do this to make sure that you are on the right-track! We also want you to engage with this project and keep you accountable!
+Late Policy: If you choose your dataset past the deadline or do not clear it with the instructor you will lose 50% of the grade. Since you have a full week to complete this step, no exceptions will be granted. 
+
+What to submit:
+Create your own GitHub repository. The repository must contain:
+Your .ipynb notebook with full output (no .py files will be accepted)
+Your dataset file 
+A README file with a paragraph describing your dataset and your main finding
+Submit the link to your GitHub repository in Gradescope.
+Tasks:
+Note: Mechanical code that satisfies the technical requirements but offers no insight, will receive only partial credit.
+
+0. Define and ask one question from your dataset before loading it. This question must be answered at some point in your notebook through dataset exploration.
+
+What we are truly after is a question that defines your understanding of the dataset. This will be the main topic of your presentation.
+
+For example: In past years, we have used the Sloan Digital Sky Survey dataset which contained observations (stars, galaxies, or quasars). Questions that were asked: Do quasars appear to be farther away than galaxies? Do stars show any redshift?
+
+1. Load the dataset with Pandas 
+
+Read your dataset from a file (CSV, JSON, Excel, etc.) using pandas. Print the shape and display the first few rows. Handle any obvious loading issues (encoding, separators, missing headers).
+
+2. A for loop with a running counter
+
+Write a for loop that does something meaningful related to your dataset or analysis. The loop must maintain a running counter that tracks something across iterations — not just enumerate for its own sake. Clearly comment what the counter is accumulating and why.
+
+For example: Loop over a number of samples from your dataset and count how many yield a test-statistic above a threshold. Or, loop over columns and count how many have more than 5% missing values, or a value above a threshold.
+
+3. Conditional logic
+
+Use an if / elif / else block somewhere in your analysis. It must branch on a real condition — not a hardcoded constant. Label your if/else/elif branch with a comment.
+
+For example: apply different preprocessing steps depending on a column's data type
+
+4. Write and call your own function
+
+Define at least one function that takes parameters and returns a value. The function must do something meaningful with your dataset — not just wrap a single built-in call. Call it at least twice with different arguments and print the result. Your function must include a docstring!
+5. Numpy array indexing
+Extract at least one column (or derived values) into a numpy array. Perform at least two of the following:
+
+Vectorized operations (e.g. mean, sum, etc)
+Boolean masking of values
+Index access to retrieve a specific element
+Show that you can work with the array directly! 
+
+6. Dictionary manipulation
+
+Build your own dictionary to store results across iterations, then read from it (using a for loop or read directly using square brackets).
+
+Example: Loop over categories of your dataset, compute a summary statistic for each, and store it in a dict. Then, read the dict to identify which category had the highest value.
+
+7. Two plots with matplotlib
+
+Produce at least two distinct plots using matplotlib. Every plot must have axis labels and a title.
+
+Plot 1 (required): a histogram of a numeric column. Choose a meaningful bin count and label the axes with units. Comment on the shape of your data (Gaussian? Binominal? Other distribution?).
+Plot 2 (your choice): any other plot type relevant to your data — scatter, bar, line, box plot, etc. Briefly explain in a comment or markdown cell why you chose this plot for your data.
+8. A more advanced task: a simulation loop OR linear regression.
+
+In this final task, you have a choice. You may either:
+
+Test a hypothesis with sample permutation. Write a 1-sentence interpretation of your p-value in the context of your dataset topic.
+Example: In class, we took a Penguin dataset to test whether one species of Penguins was heavier than other. We first computed the absolute difference in weight (observed). Then, we ran simulations (where we shuffled the labels 1000 times) and we computed and printed the p-value. Finally, we interpreted that p-value to see if we can reject the null hypothesis.
+
+Perform a linear regression or a fit to features in your data. Compute a metric that assess the quality of your fit. Write a 1-sentence interpretation of the result.
+Final guidelines:
+You may ask any questions in Piazza to get help from instructors or peers until Tuesday April 28th. 
+Your code must reflect your own understanding.
+During your presentation, you may be asked to walk the instructor through any part of your code.
